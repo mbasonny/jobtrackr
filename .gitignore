@@ -1,13 +1,13 @@
-#backend
-backend/target
+# Backend
+backend/target/
 *.class
 
-#frontend
-frontend/node_modules
-frontend/dist
-frontend/.angualr
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
 
-#divers
+# Divers
 .env
 .DS_Store
 *.log

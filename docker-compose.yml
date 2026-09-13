@@ -1,0 +1,76 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: jobtrackr
+      POSTGRES_USER: jobtrackr
+      POSTGRES_PASSWORD: jobtrackr
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobtrackr"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: jobtrackr
+      DB_USER: jobtrackr
+      DB_PASSWORD: jobtrackr
+      JWT_SECRET: ${JWT_SECRET:-change-this-dev-secret-please-32-bytes-minimum-xx}
+      JWT_EXPIRATION_MS: 7200000
+      MANAGEMENT_PORT: 8081
+    ports:
+      - "8080:8080"
+      # Port de gestion (santé, métriques) exposé sur l'hôte pour le développement local
+      # uniquement. En production, ne pas publier ce port : Prometheus y accède via le
+      # réseau interne Docker (backend:8081), sans passer par l'hôte.
+      - "8081:8081"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "4200:80"
+
+  prometheus:
+    image: prom/prometheus:v3.0.1
+    restart: unless-stopped
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+    volumes:
+      - ./monitoring/grafana-provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - grafana-data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
+  prometheus-data:
+  grafana-data:
