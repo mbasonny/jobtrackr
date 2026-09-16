@@ -1,11 +1,10 @@
 package com.project.jobtrackr.auth.service;
-
-import com.project.jobtrackr.auth.*;
 import com.project.jobtrackr.auth.dto.AuthResponse;
 import com.project.jobtrackr.auth.dto.LoginRequest;
 import com.project.jobtrackr.auth.dto.RegisterRequest;
+import com.project.jobtrackr.auth.*;
 import com.project.jobtrackr.auth.security.CustomUserDetails;
-import com.project.jobtrackr.common.EmailAlreadyUsedException;
+import com.project.jobtrackr.common.exceptions.EmailAlreadyUsedException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;

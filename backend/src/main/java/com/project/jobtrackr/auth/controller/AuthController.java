@@ -1,5 +1,6 @@
 package com.project.jobtrackr.auth.controller;
 
+
 import com.project.jobtrackr.auth.dto.AuthResponse;
 import com.project.jobtrackr.auth.dto.LoginRequest;
 import com.project.jobtrackr.auth.dto.RegisterRequest;
