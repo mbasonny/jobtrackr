@@ -5,6 +5,7 @@ import com.project.jobtrackr.application.dto.ApplicationResponse;
 import com.project.jobtrackr.application.dto.CreateApplicationRequest;
 import com.project.jobtrackr.application.dto.StatsResponse;
 import com.project.jobtrackr.application.dto.UpdateApplicationRequest;
+import com.project.jobtrackr.common.exceptions.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
@@ -14,6 +15,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -45,7 +47,20 @@ public class ApplicationServiceTest {
     }
 
     @Test
-    void devrait_ne_mosifier_que_les_champs_fournis_lors_dune_mise_a_jour_partielle(){
+    void devrait_lever_une_exception_si_la_candidature_nappartient_pas_a_lutilisateur() {
+        UUID userId = UUID.randomUUID();
+        UUID applicationId = UUID.randomUUID();
+
+        when(repository.findByIdAndUserId(applicationId, userId)).thenReturn(Optional.empty());
+
+        var update = new UpdateApplicationRequest(null, null, null, null, Status.ENTRETIEN, null);
+
+        assertThatThrownBy(() -> service.update(userId, applicationId, update))
+                .isInstanceOf(ResourceNotFoundException.class);
+    }
+
+    @Test
+    void devrait_ne_modifier_que_les_champs_fournis_lors_dune_mise_a_jour_partielle(){
         UUID userId = UUID.randomUUID();
         UUID applicationId = UUID.randomUUID();
 
