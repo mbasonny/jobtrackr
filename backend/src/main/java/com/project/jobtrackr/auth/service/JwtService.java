@@ -1,4 +1,4 @@
-package com.project.jobtrackr.auth.security;
+package com.project.jobtrackr.auth.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

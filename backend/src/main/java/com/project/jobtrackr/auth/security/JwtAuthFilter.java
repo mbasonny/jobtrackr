@@ -1,5 +1,6 @@
 package com.project.jobtrackr.auth.security;
 
+import com.project.jobtrackr.auth.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
