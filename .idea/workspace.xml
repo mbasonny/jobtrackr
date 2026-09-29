@@ -1,36 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1d2660f-2a0e-44b9-bb5c-605ab1a1d4e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/common/EmailAlreadyUsedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/applcation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+    <list default="true" id="989607db-957b-43f6-ae02-16704a7b4907" name="Changes" comment="feat: endpoints d'inscription et de connexion">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/auth/AuthControllerIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jobtrackr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jobtrackr.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/JobtrackrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/JobtrackrApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/JobApplicationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/JobApplicationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/ApplicationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/ApplicationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/CreateApplicationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/CreateApplicationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/StatsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/StatsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/UpdateApplicationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/UpdateApplicationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/common/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/jobtrackr/application/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -45,48 +75,182 @@
     &quot;accountId&quot;: &quot;e0b05bfe-5b73-4f6f-9854-92c180f0275f&quot;
   }
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0,
+  &quot;associatedIndex&quot;: 8,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3JHWwBbnpSm2SS7RcReUSrjGBEN" />
+  <component name="ProjectId" id="3JGl8pa7LnH5mdIjDPj4kwUBiAJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sonny/Documents/mes docs/projets-personnels/jobtrackr&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.jobtrackr.executor": "Run",
+    "JUnit.All in jobtrackr.executor": "Run",
+    "JUnit.ApplicationRepositoryIT (1).executor": "Run",
+    "JUnit.ApplicationRepositoryIT.executor": "Run",
+    "Maven.jobtrackr [clean].executor": "Run",
+    "Maven.jobtrackr [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.JobtrackrApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feat/candidature",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/sonny/Documents/mes docs/projets-personnels/tuto jobtrackr Java/jobtrackr/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.jobtrackr.common.exceptions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ApplicationRepositoryIT (1)">
+    <configuration name="jobtrackr" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <envs>
+        <env name="DB_HOST" value="172.23.0.2" />
+        <env name="DB_NAME" value="jobtrackr" />
+        <env name="DB_PASSWORD" value="jobtrackr" />
+        <env name="DB_PORT" value="5432" />
+        <env name="DB_USER" value="jobtrackr" />
+        <env name="JWT_EXPIRATION_MS" value="7200000" />
+        <env name="JWT_SECRET" value="dfsdfsdfsdfsdfsdfsdfkkjlmkljksdjlkfljksdfsdf78sd45f6886456sd456fsd456fsdazrzaazraz2123879qeqgshtyrgte" />
+        <env name="MANAGEMENT_PORT" value="8081" />
+        <env name="SERVER_PORT" value="8080" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.project.jobtrackr.JobtrackrApplication" />
+      <module name="jobtrackr" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in jobtrackr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationRepositoryIT (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jobtrack.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jobtrack.application" />
+      <option name="MAIN_CLASS_NAME" value="jobtrack.application.ApplicationRepositoryIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationRepositoryIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jobtrackr.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jobtrackr.application" />
+      <option name="MAIN_CLASS_NAME" value="com.jobtrackr.application.ApplicationRepositoryIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="JobtrackrApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jobtrackr.JobtrackrApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobtrackrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.jobtrackr.JobtrackrApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ApplicationRepositoryIT (1)" />
+        <item itemvalue="JUnit.ApplicationRepositoryIT" />
+        <item itemvalue="JUnit.All in jobtrackr" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-d2dedd3439cd-intellij.indexing.shared.core-IU-263.3889.65" />
-        <option value="bundled-js-predefined-d6986cc7102b-a0b4d89f0686-JavaScript-IU-263.3889.65" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a1d2660f-2a0e-44b9-bb5c-605ab1a1d4e5" name="Changes" comment="" />
-      <created>1789318710883</created>
+      <changelist id="989607db-957b-43f6-ae02-16704a7b4907" name="Changes" comment="" />
+      <created>1789295158340</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1789318710883</updated>
+      <updated>1789295158340</updated>
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="feat: endpoints d'inscription et de connexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: endpoints d'inscription et de connexion" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
