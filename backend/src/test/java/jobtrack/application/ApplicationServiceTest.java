@@ -5,7 +5,7 @@ import com.jobtrackr.application.dto.ApplicationResponse;
 import com.jobtrackr.application.dto.CreateApplicationRequest;
 import com.jobtrackr.application.dto.StatsResponse;
 import com.jobtrackr.application.dto.UpdateApplicationRequest;
-import com.jobtrackr.common.exceptions.ResourceNotFoundException;
+import com.jobtrackr.common.ResourceNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;

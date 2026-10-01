@@ -4,7 +4,7 @@ import com.jobtrackr.application.dto.ApplicationResponse;
 import com.jobtrackr.application.dto.CreateApplicationRequest;
 import com.jobtrackr.application.dto.StatsResponse;
 import com.jobtrackr.application.dto.UpdateApplicationRequest;
-import com.jobtrackr.common.exceptions.ResourceNotFoundException;
+import com.jobtrackr.common.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

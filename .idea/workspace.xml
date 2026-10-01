@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="989607db-957b-43f6-ae02-16704a7b4907" name="Changes" comment="feat: endpoints d'inscription et de connexion">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/auth/AuthControllerIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jobtrackr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jobtrackr.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/ApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/JobtrackrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/JobtrackrApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/JobApplicationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/JobApplicationEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/ApplicationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/ApplicationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/CreateApplicationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/CreateApplicationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/StatsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/StatsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/application/dto/UpdateApplicationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/dto/UpdateApplicationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/dto/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/dto/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/auth/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/jobtrackr/common/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/jobtrackr/application/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/EmailAlreadyUsedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +76,7 @@
     "JUnit.ApplicationRepositoryIT.executor": "Run",
     "Maven.jobtrackr [clean].executor": "Run",
     "Maven.jobtrackr [validate].executor": "Run",
+    "Maven.jobtrackr [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -112,7 +87,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.JobtrackrApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "feat/candidature",
+    "git-widget-placeholder": "feat/applications-crud",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/sonny/Documents/mes docs/projets-personnels/tuto jobtrackr Java/jobtrackr/backend",
     "node.js.detected.package.eslint": "true",
