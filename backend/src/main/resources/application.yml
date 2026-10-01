@@ -5,8 +5,10 @@ spring:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:jobtrackr}
     username: ${DB_USER:jobtrackr}
     password: ${DB_PASSWORD:jobtrackr}
-    driver-class-name: org.postgresql.Driver
+#    driver-class-name: org.postgresql.Driver
+
   jpa:
+#    defer-datasource-initialization: true
     hibernate:
       ddl-auto: validate
     show-sql: false
@@ -14,16 +16,17 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false
+
   flyway:
     enabled: true
-    location: classpath:db/migration
-    baseline-on-migrate: false
+    locations: classpath:db/migration
+    baseline-on-migrate: true
 
 server:
   port: ${SERVER_PORT:8080}
 
 jwt:
-  secret: ${JWT_SECRET:ssdfsdfsdfsdf64644sdf456sd31221wsd313f1gsf1s12d3fsdfg45f3sq12fdfsdqx}
+  secret: ${JWT_SECRET:IbQMGSWlUR6Zz2uVntBbjQBtpXICIwmwxAelMgFOZUl0GjUH5ah9UoV9d8uP6PBNLHwqjOYGKw3yaPG+Mcog9g==}
   expiration-ms: ${JWT_EXPIRATION_MS:7200000}
 
 springdoc:

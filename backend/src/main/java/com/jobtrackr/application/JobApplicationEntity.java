@@ -13,7 +13,7 @@ import java.util.UUID;
 @Setter
 @Getter
 @Builder
-@Table(name="job_application")
+@Table(name="job_applications")
 public class JobApplicationEntity {
 
     @Id

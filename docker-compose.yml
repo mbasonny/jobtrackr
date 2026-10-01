@@ -1,7 +1,10 @@
 services:
   postgres:
     image: postgres:16-alpine
+    container_name: jobtrackr-pg
     restart: unless-stopped
+    networks:
+      - jobtrackr-network
     environment:
       POSTGRES_DB: jobtrackr
       POSTGRES_USER: jobtrackr
@@ -16,9 +19,26 @@ services:
       timeout: 5s
       retries: 5
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: jobtrackr-pgadmin
+    restart: unless-stopped
+    networks:
+      - jobtrackr-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@jobtrackr.com
+      PGADMIN_DEFAULT_PASSWORD: adminpassword
+    ports:
+      - "8082:80"
+
   backend:
     build: ./backend
     restart: unless-stopped
+    networks:
+      - jobtrackr-network
     depends_on:
       postgres:
         condition: service_healthy
@@ -28,19 +48,18 @@ services:
       DB_NAME: jobtrackr
       DB_USER: jobtrackr
       DB_PASSWORD: jobtrackr
-      JWT_SECRET: ${JWT_SECRET:-change-this-dev-secret-please-32-bytes-minimum-xx}
+      JWT_SECRET: ${JWT_SECRET:'IIbQMGSWlUR6Zz2uVntBbjQBtpXICIwmwxAelMgFOZUl0GjUH5ah9UoV9d8uP6PBNLHwqjOYGKw3yaPG+Mcog9g==}
       JWT_EXPIRATION_MS: 7200000
       MANAGEMENT_PORT: 8081
     ports:
       - "8080:8080"
-      # Port de gestion (santé, métriques) exposé sur l'hôte pour le développement local
-      # uniquement. En production, ne pas publier ce port : Prometheus y accède via le
-      # réseau interne Docker (backend:8081), sans passer par l'hôte.
       - "8081:8081"
 
   frontend:
     build: ./frontend
     restart: unless-stopped
+    networks:
+      - jobtrackr-network
     depends_on:
       - backend
     ports:
@@ -49,6 +68,8 @@ services:
   prometheus:
     image: prom/prometheus:v3.0.1
     restart: unless-stopped
+    networks:
+      - jobtrackr-network
     volumes:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus-data:/prometheus
@@ -58,6 +79,8 @@ services:
   grafana:
     image: grafana/grafana:11.4.0
     restart: unless-stopped
+    networks:
+      - jobtrackr-network
     depends_on:
       - prometheus
     environment:
@@ -74,3 +97,8 @@ volumes:
   pgdata:
   prometheus-data:
   grafana-data:
+
+# Déclaration du réseau personnalisé créé manuellement en ligne de commande
+networks:
+  jobtrackr-network:
+    external: true

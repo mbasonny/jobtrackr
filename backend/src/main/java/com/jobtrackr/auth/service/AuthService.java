@@ -25,7 +25,7 @@ public class AuthService {
 
     public AuthResponse register(RegisterRequest request) {
         log.info("Vérification de l'existance de l'adresse email");
-        if(userRepository.existByEmail(request.email())){
+        if(userRepository.existsByEmail(request.email())){
             throw new EmailAlreadyUsedException(request.email());
         }
         log.info("Ajout du nouvel user");

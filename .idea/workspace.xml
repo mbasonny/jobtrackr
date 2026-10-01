@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="989607db-957b-43f6-ae02-16704a7b4907" name="Changes" comment="feat: endpoints d'inscription et de connexion">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/JobApplicationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/application/JobApplicationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/EmailAlreadyUsedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/EmailAlreadyUsedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/common/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/jobtrack/application/ApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/jobtrackr/auth/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/applcation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,26 +107,19 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/resources/db" />
+      <recent name="$PROJECT_DIR$/backend/src/main/resources/migration" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.project.jobtrackr.common.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApplicationRepositoryIT (1)">
+  <component name="RunManager" selected="Application.jobtrackr">
     <configuration name="jobtrackr" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <envs>
-        <env name="DB_HOST" value="172.23.0.2" />
-        <env name="DB_NAME" value="jobtrackr" />
-        <env name="DB_PASSWORD" value="jobtrackr" />
-        <env name="DB_PORT" value="5432" />
-        <env name="DB_USER" value="jobtrackr" />
-        <env name="JWT_EXPIRATION_MS" value="7200000" />
-        <env name="JWT_SECRET" value="dfsdfsdfsdfsdfsdfsdfkkjlmkljksdjlkfljksdfsdf78sd45f6886456sd456fsd456fsdazrzaazraz2123879qeqgshtyrgte" />
-        <env name="MANAGEMENT_PORT" value="8081" />
-        <env name="SERVER_PORT" value="8080" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="com.project.jobtrackr.JobtrackrApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.jobtrackr.JobtrackrApplication" />
       <module name="jobtrackr" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,21 +129,6 @@
       <module name="jobtrackr" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApplicationRepositoryIT (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jobtrackr" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jobtrack.application.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jobtrack.application" />
-      <option name="MAIN_CLASS_NAME" value="jobtrack.application.ApplicationRepositoryIT" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,6 +143,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.jobtrackr.application" />
       <option name="MAIN_CLASS_NAME" value="com.jobtrackr.application.ApplicationRepositoryIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationRepositoryIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jobtrackr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jobtrack.application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jobtrack.application" />
+      <option name="MAIN_CLASS_NAME" value="jobtrack.application.ApplicationRepositoryIT" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -188,6 +182,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.jobtrackr" />
+      <item itemvalue="JUnit.All in jobtrackr" />
+      <item itemvalue="JUnit.ApplicationRepositoryIT" />
+      <item itemvalue="JUnit.ApplicationRepositoryIT (1)" />
+      <item itemvalue="Spring Boot.JobtrackrApplication" />
+      <item itemvalue="Spring Boot.JobtrackrApplication (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ApplicationRepositoryIT (1)" />

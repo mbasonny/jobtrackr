@@ -24,11 +24,11 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(name="full_name", nullable = false)
     private String fullName;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(name="role", nullable = false, length = 20)
     @Builder.Default
     private Role role = Role.USER;
 
