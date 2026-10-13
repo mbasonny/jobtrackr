@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: jobtrackr
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:jobtrackr}
+    username: ${DB_USER:jobtrackr}
+    password: ${DB_PASSWORD:jobtrackr}
+#    driver-class-name: org.postgresql.Driver
+
+  jpa:
+#    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET:IbQMGSWlUR6Zz2uVntBbjQBtpXICIwmwxAelMgFOZUl0GjUH5ah9UoV9d8uP6PBNLHwqjOYGKw3yaPG+Mcog9g==}
+  expiration-ms: ${JWT_EXPIRATION_MS:7200000}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  server:
+    port: ${MANAGEMENT_PORT:8081}
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when-authorized
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: jobtrackr
+  prometheus:
+    metrics:
+      export:
+        enabled: true
