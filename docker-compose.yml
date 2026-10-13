@@ -48,11 +48,11 @@ services:
       DB_NAME: jobtrackr
       DB_USER: jobtrackr
       DB_PASSWORD: jobtrackr
-      JWT_SECRET: ${JWT_SECRET:'IIbQMGSWlUR6Zz2uVntBbjQBtpXICIwmwxAelMgFOZUl0GjUH5ah9UoV9d8uP6PBNLHwqjOYGKw3yaPG+Mcog9g==}
+      JWT_SECRET: "IbQMGSWlUR6Zz2uVntBbjQBtpXICIwmwxAelMgFOZUl0GjUH5ah9UoV9d8uP6PBNLHwqjOYGKw3yaPG+Mcog9g=="
       JWT_EXPIRATION_MS: 7200000
       MANAGEMENT_PORT: 8081
     ports:
-      - "8080:8080"
+      - "8083:8080" # Résolution du conflit : 8083 sur votre machine -> 8080 dans le conteneur
       - "8081:8081"
 
   frontend:
@@ -98,7 +98,6 @@ volumes:
   prometheus-data:
   grafana-data:
 
-# Déclaration du réseau personnalisé créé manuellement en ligne de commande
 networks:
   jobtrackr-network:
     external: true
